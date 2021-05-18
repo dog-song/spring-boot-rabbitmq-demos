@@ -1,4 +1,4 @@
-package com.dogsong.rabbitmq;
+package com.dogsong.rabbitmq.simple;
 
 import com.rabbitmq.client.*;
 
