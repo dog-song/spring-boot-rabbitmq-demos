@@ -1,0 +1,12 @@
+server:
+  port: 17013
+
+# rabbit配置
+spring:
+  rabbitmq:
+    host: 10.0.9.173
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+

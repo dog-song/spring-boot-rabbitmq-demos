@@ -10,17 +10,49 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>simple-demos</module>
+        <module>springboot-rabbitmq-fanout-producer</module>
+        <module>springboot-rabbitmq-fanout-consumer</module>
+        <module>springboot-rabbitmq-direct-producer</module>
+        <module>springboot-rabbitmq-direct-consumer</module>
+        <module>springboot-rabbitmq-topic-producer</module>
+        <module>springboot-rabbitmq-topic-consumer</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
 
+        <!-- 版本控制 -->
+        <springboot.version>2.4.3</springboot.version>
         <rabbit-amqp-client>5.10.0</rabbit-amqp-client>
+        <springboot.amqp.version>2.4.3</springboot.amqp.version>
+        <spring-rabbit-test.version>2.3.5</spring-rabbit-test.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${springboot.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.amqp</groupId>
+                <artifactId>spring-rabbit-test</artifactId>
+                <version>${spring-rabbit-test.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+
             <!-- 导入rabbitmq的依赖 -->
             <dependency>
                 <groupId>com.rabbitmq</groupId>
@@ -28,6 +60,12 @@
                 <version>${rabbit-amqp-client}</version>
             </dependency>
 
+            <!-- springboot rabbitmq依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${springboot.amqp.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
