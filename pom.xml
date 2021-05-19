@@ -16,6 +16,12 @@
         <module>springboot-rabbitmq-direct-consumer</module>
         <module>springboot-rabbitmq-topic-producer</module>
         <module>springboot-rabbitmq-topic-consumer</module>
+        <module>springboot-rabbitmq-ttl-producer</module>
+        <module>springboot-rabbitmq-ttl-consumer</module>
+        <module>dlx-producer</module>
+        <module>dlx-consumer</module>
+        <module>message-confirm-producer</module>
+        <module>message-confirm-consumer</module>
     </modules>
 
     <properties>
